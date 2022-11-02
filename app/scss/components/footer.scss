@@ -1,0 +1,35 @@
+@use '../util' as *;
+
+.footer{
+    background-color: var(--brown-dark);
+    @include breakpoint-down(tablet){
+        text-align: center;
+    }
+
+    &-bloc{
+        font-weight: 300;
+        color: var(--white);
+        padding-top: rem(72);
+        padding-bottom: rem(88);
+        @include breakpoint-down(tablet){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include breakpoint-down(small){
+            grid-template-columns: repeat(1,1fr);
+        }
+        .paragraph{
+            margin: revert;
+            font-weight: 300;
+        }
+        .title{text-align: inherit;}
+    }
+    &-copy{
+        background-color: var(--brown-darker);
+        color: var(--white);
+        padding-top: rem(15);
+        padding-bottom: rem(15);
+        span{
+            font-weight: 300;
+        }
+    }
+}

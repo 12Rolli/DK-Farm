@@ -1,0 +1,16 @@
+@use '../util' as *;
+
+.btnbg {
+    font-weight: 700;
+    font-size: rem(13);
+    color: var(--white);
+    padding: rem(8.2) rem(25) rem(8.2) rem(25);
+    border-radius: rem(9);
+    background-color: var(--brown);
+}
+.btnline {
+    display: inline-flex;
+    border-bottom: rem(0.8) solid var(--brown);
+    font-weight: 400;
+    font-size: rem(18);
+}

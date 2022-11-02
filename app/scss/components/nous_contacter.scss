@@ -1,0 +1,61 @@
+@use '../util' as *;
+
+.nous_contacter{
+
+    .contact{
+        justify-content: center;
+        @include breakpoint-down(small){
+            grid-template-columns: 1fr;
+            gap: rem(17);
+        }
+
+        &-img{
+            .title{
+                display: none;
+                @include breakpoint-down(small){
+                    display: block;
+                    color: var(--brown);
+                    b{
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            img{
+                width: 100%;
+                animation: float 3s linear infinite;
+            }
+            @keyframes float{
+                0%, 100%{
+                  transform: translateY(0rem);
+                }
+                50%{
+                  transform: translateY(2rem);
+                }
+              }
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            .title{
+                color: var(--brown);
+                @include breakpoint-down(tablet){
+                    font-size: rem(30);
+                }
+                @include breakpoint-down(small){
+                    display: none;
+                }
+                b{
+                    font-weight: 300;
+                }
+            }
+            .paragraph{
+                margin: revert;
+            }
+            .btnbg{
+                align-self: center;
+            }
+        }
+    }
+}
