@@ -1,0 +1,63 @@
+@use '../util' as *;
+
+.produits{
+    margin-top: rem(90);
+    background-image: url('https://res.cloudinary.com/digital-x-sarl/image/upload/v1667467634/dkfarm/accueil/nosproduitsbg.png');
+    background-size: cover;
+    background-position: center;
+    // height: 130vh;
+    @include breakpoint-down(small){
+        background-image: none;
+    }
+    .produit{
+        padding-top: rem(100);
+        @include breakpoint-down(extralarge){
+            padding-top: rem(200);
+        }
+        @include breakpoint-down(small){
+            padding-top: rem(40);
+        }
+        
+        &-title{
+            color: var(--white);
+            @include breakpoint-down(small){
+                color: var(--brown);
+            }
+            b{font-weight: 300;}
+        }
+        &-blocs{
+            padding: rem(55) 0 rem(240) 0;
+            // padding: rem(55) 0 0 0;
+            gap: rem(10);
+            @include breakpoint-down(tablet){
+                grid-template-columns: repeat(3,1fr);
+            }
+            @include breakpoint-down(small){
+                grid-template-columns: repeat(1,1fr);
+            }
+            img{width: 100%;}
+            .bg{
+                background-color: var(--pink-light);
+                padding: rem(7) rem(5) rem(20) rem(5);
+                border-radius: rem(5);
+                .text{
+                    font-weight: 700;
+                    text-align: center;
+                    padding-top: rem(10);
+                }
+                .paragraph{
+                    text-align: center;
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+        // .activeblock{
+        //     display: block;
+        // }
+        // .block{
+        //     display: block !important;
+        // }
+    }
+}

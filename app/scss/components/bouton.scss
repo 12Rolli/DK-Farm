@@ -8,6 +8,13 @@
     border-radius: rem(9);
     background-color: var(--brown);
 }
+.btnbg:hover {
+    background-color: var(--brown-darker);
+}
+.btnline:hover {
+    color: var(--brown-darker);
+    border-bottom: rem(0.8) solid var(--brown-darker);
+}
 .btnline {
     display: inline-flex;
     border-bottom: rem(0.8) solid var(--brown);

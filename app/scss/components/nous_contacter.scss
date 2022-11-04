@@ -1,6 +1,10 @@
 @use '../util' as *;
 
 .nous_contacter{
+    margin-top: rem(-230);
+    @include breakpoint-down(medium){
+        margin-top: rem(-45);
+    }
 
     .contact{
         justify-content: center;
@@ -37,7 +41,7 @@
         &-text{
             display: flex;
             flex-direction: column;
-            align-self: center;
+            align-self: end;
             .title{
                 color: var(--brown);
                 @include breakpoint-down(tablet){

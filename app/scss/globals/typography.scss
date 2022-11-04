@@ -19,9 +19,36 @@ h1,h2,h3,h4,h5,p{
     font-weight: 900;
     font-size: rem(36);
     text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint-down(tablet){
+        font-size: rem(30);
+    }
+    @include breakpoint-down(small){
+        font-size: rem(20);
+    }
+    span{
+        font-weight: 900;
+    }
+    &--brown{
+        color: var(--brown);
+        font-weight: 300;
+    }
+    &--white{
+        color: var(--white);
+        font-weight: 300;
+    }
 }
 
 .paragraph {
     font-weight: 400;
     font-size: rem(14);
+    line-height: 177%;
+
+    @include breakpoint-down(tablet){
+        font-size: rem(13);
+    }
+    @include breakpoint-down(small){
+        font-size: rem(12);
+    }
 }

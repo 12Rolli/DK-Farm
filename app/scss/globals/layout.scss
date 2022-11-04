@@ -6,10 +6,13 @@
 	margin: 0 auto;
 
 	@include breakpoint-down(tablet) {
-		padding: 0 rem(100);
+		padding: 0 rem(50);
 	}
 
 	@include breakpoint-down(small) {
-		padding: 0 rem(40);
+		padding: 0 rem(20);
 	}
+}
+.mt-3{
+	margin-top: 3rem;
 }

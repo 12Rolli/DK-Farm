@@ -21,7 +21,11 @@
             margin: revert;
             font-weight: 300;
         }
-        .title{text-align: inherit;}
+        .title{
+            text-align: inherit;
+            font-size: rem(28);
+            font-weight: 600;
+        }
     }
     &-copy{
         background-color: var(--brown-darker);

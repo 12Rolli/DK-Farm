@@ -1,0 +1,92 @@
+@use '../util' as *;
+.quisommenous {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    &__submenu {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        font-weight: 600;
+        font-size: rem(16);
+        justify-self: center;
+        gap: 5rem;
+        
+        p{
+            cursor: pointer;
+        }
+        &--selected{
+            color: var(--brown);
+        }
+
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__description{
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display:flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &--title{
+            font-size: rem(20);
+            color: var(--brown);
+        }
+
+        &--link{
+            color: var(--brown);
+            align-self: flex-start;
+            padding-bottom: 0.2rem;
+            cursor: pointer;
+            ion-icon{
+                align-self: center;
+                padding-top: 0.2rem;
+                color: var(--brown);
+            }
+        }
+    }
+
+   
+
+    &__images{
+        position: relative;
+         img{
+            width: 50%;
+            box-shadow: 0 1.5rem 4rem rgba(var(--black), .4);
+            position: absolute;
+            z-index: 10;
+            transition: all .2s;
+           // outline-offset: 2rem;
+         }
+
+         :nth-child(1){
+            left: 2rem;
+            top: 2rem;
+         }
+
+         :nth-child(2){
+            right: 0;
+            top: 2rem;
+         }
+         :nth-child(3){
+            left: 24%;
+            top: 8rem;
+         }
+    }
+    .quisommenous__image--selected{
+        outline: 0.2rem solid var(--brown);
+        transform: scale(1.1) translateY(-.5rem);
+        box-shadow: 0 2.5rem 4rem rgba(var(--black), .5);
+        z-index: 100;
+    }
+}
+
+.hide{
+    display: none;
+}
