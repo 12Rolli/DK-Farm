@@ -51,6 +51,10 @@
         font-weight: 700;
         font-size: rem(24);
         color: var(--brown);
+
+        @include breakpoint-down(small){
+            font-size: rem(17);
+        }
     }
     &__contact {
         font-weight: 700;

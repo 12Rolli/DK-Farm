@@ -5,16 +5,18 @@
     gap: 2rem;
 
     &__submenu {
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
         text-align: center;
         font-weight: 600;
         font-size: rem(16);
         justify-self: center;
         gap: 5rem;
         
+        @include breakpoint-down(small){
+            gap: 1.5rem;
+            font-size: rem(14);
+        }
         p{
             cursor: pointer;
         }
@@ -26,6 +28,10 @@
     &__content{
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @include breakpoint-down(small){
+            grid-template-columns: 1fr;
+        }
     }
     &__description{
         display: -ms-flexbox;
@@ -37,6 +43,10 @@
         &--title{
             font-size: rem(20);
             color: var(--brown);
+
+            @include breakpoint-down(small){
+                display: none;
+            }
         }
 
         &--link{
@@ -63,6 +73,10 @@
             z-index: 10;
             transition: all .2s;
            // outline-offset: 2rem;
+
+           @include breakpoint-down(tablet){
+            width: 60%;
+           }
          }
 
          :nth-child(1){
@@ -77,6 +91,10 @@
          :nth-child(3){
             left: 24%;
             top: 8rem;
+         }
+
+         @include breakpoint-down(small){
+            display: none;
          }
     }
     .quisommenous__image--selected{
