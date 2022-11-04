@@ -34,6 +34,7 @@
             }
             @include breakpoint-down(small){
                 grid-template-columns: repeat(1,1fr);
+                padding: rem(55) 0 rem(96) 0;
             }
             img{width: 100%;}
             .bg{

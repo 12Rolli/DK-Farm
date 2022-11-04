@@ -1,0 +1,171 @@
+@use '../util' as *;
+
+.section-contact {
+    font-size: 1.2rem;
+    @include breakpoint-down(small) {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    .secondary-heading {
+      color: var(--brown);
+      margin-bottom: 2rem;
+      font-weight: 900;
+    }
+    span {
+      font-weight: 300;
+    }
+    p {
+      line-height: 2;
+      margin-bottom: 0.5rem;
+    }
+    .contacts {
+      padding: 2rem;
+      @include breakpoint-down(small) {
+        padding: 0;
+        padding-top: 2rem;
+      }
+      @include breakpoint(medium) {
+        padding: 2rem 0;
+      }
+    }
+    &__grid {
+      box-shadow: 0 2rem 4rem rgb(3 1 0 / 15%);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-radius: 1rem;
+      overflow: hidden;
+      @include breakpoint-down(small) {
+        grid-template-columns: 1fr;
+  
+        // margin-bottom: 2rem;
+      }
+  
+      &--1 {
+        @include breakpoint-down(small) {
+          &:nth-child(1) {
+            grid-row: 2;
+          }
+        }
+        padding: 6rem 0 0 0;
+        color: var(--brown);
+        background-image: linear-gradient(
+            to right,
+            rgba(rgba(224, 223, 223, 0.868), 0.7),
+            rgba(224, 223, 223, 0.868)
+          ),
+          url(https://res.cloudinary.com/digital-x-sarl/image/upload/v1667317693/dkfarm/accueil/contact/Rectangle_49_1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+  
+        @include breakpoint-down(small) {
+          padding: 0 0.6rem;
+  
+          background-image: none;
+          background-color: var(--brown-light);
+        }
+  
+        ion-icon {
+          margin-right: 1rem;
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          border-radius: 50%;
+          background-color: transparent;
+        }
+        .icon {
+          color: var(--white);
+          background-color: var(--brown);
+        }
+        .bottom-icons {
+          margin-top: 13rem;
+          text-align: center;
+          a{border-bottom: 0;}
+          @include breakpoint-down(small) {
+            margin-top: 2rem;
+          }
+          ion-icon {
+            padding: 0;
+            margin-right: 0;
+          }
+        }
+        ul {
+          list-style: none;
+          padding: 0 2rem;
+  
+          li {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 1rem;
+  
+            @include breakpoint(large) {
+              white-space: nowrap;
+            }
+          }
+          a {
+            display: inline-block;
+            color: var(--brown);
+  
+            text-decoration: none;
+            border-bottom: 2px solid currentColor;
+          }
+        }
+      }
+      &--2 {
+        text-align: center;
+        padding: 2rem;
+        background-color: var(--brown-light);
+        @include breakpoint-down(small) {
+          padding: 0.4rem;
+        }
+      }
+    }
+    .btn--brown {
+      margin-top: 2rem;
+      padding: 0.5rem 4rem;
+      background-color: var(--brown);
+      border: none;
+      border-radius: 10px;
+      color: var(--white);
+      cursor: pointer;
+    }
+}
+
+.form {
+    &__input {
+      padding: 1rem 1.2rem;
+      border-radius: 0.8rem;
+      background-color: var(--white, 0.5);
+      border: none;
+      border-bottom: 3px solid transparent;
+      width: 100%;
+      display: block;
+      transition: all 0.3s;
+      &--message {
+        padding: 4rem;
+      }
+  
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(var(--black), 0.1);
+        border-bottom: 3px solid var(--brown-dark);
+      }
+      &:focus:invalid {
+        border-bottom: 3px solid var(--black);
+      }
+    }
+    &__label {
+      color: var(--brown-dark);
+      text-align: left;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      display: block;
+      transition: all 0.3s;
+    }
+    &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+  }
+  

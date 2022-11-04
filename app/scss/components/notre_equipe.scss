@@ -2,7 +2,9 @@
 
 .equipe{
     margin: rem(100) 0;
-
+    @include breakpoint-down(small){
+        margin: rem(48) 0;
+    }
     &-blocs{
         gap: rem(10);
         @include breakpoint-down(small){

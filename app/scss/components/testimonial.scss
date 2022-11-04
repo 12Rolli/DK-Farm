@@ -1,0 +1,50 @@
+@use '../util' as *;
+
+.section-testimonial {
+    background-color: var(--brown-light);
+    padding: 3rem 0;
+    .secondary-heading {
+      color: var(--brown);
+      margin-bottom: 4rem;
+      font-weight: 900;
+    }
+    span {
+      font-weight: 300;
+    }
+  
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      grid-gap: 8rem;
+      margin-bottom: 3rem;
+      @include breakpoint-down(tablet) {
+        grid-gap: 6rem;
+      }
+      @include breakpoint-down(small) {
+        display: block;
+      }
+    }
+    &__contents {
+      margin-bottom: 3rem;
+      @include breakpoint-down(small) {
+        margin-bottom: 4rem;
+        padding: 0 3rem;
+      }
+    }
+    &__img {
+      width: 80%;
+      margin-bottom: 1rem;
+      @include breakpoint-down(tablet) {
+        width: 50%;
+      }
+    }
+    .tertiary-heading {
+      margin-bottom: 1rem;
+      font-weight: 900;
+    }
+    p {
+      color: rgb(55, 54, 54);
+    }
+  }
+  
