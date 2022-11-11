@@ -59,25 +59,42 @@
     </head>
     <body>
         <header class="navigation">
-    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+  <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
-    <label for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
-    </label>
+  <label for="navi-toggle" class="navigation__button">
+    <span class="navigation__icon">&nbsp;</span>
+  </label>
 
-    <div class="navigation__background">&nbsp;</div>
+  <div class="navigation__background">&nbsp;</div>
 
-    <nav class="navigation__nav">
-        <ul class="navigation__list">
-            <li class="navigation__item"><a href="#" class="navigation__link navigation__link--1">Accueil</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link  navigation__link--2">Accompagnement</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link  navigation__link--3">Carrière</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link  navigation__link--4">Blog</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link  navigation__link--5">contact</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link  navigation__link--6">nos produits</a></li>
-            </ul>
-    </nav>
-</header> 
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a href="#" class="navigation__link navigation__link--1">Accueil</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link navigation__link--2"
+          >Accompagnement</a
+        >
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link navigation__link--3">Carrière</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link navigation__link--4">Blog</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link navigation__link--5">contact</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link navigation__link--6"
+          >nos produits</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+ 
 <main>
     <section class="banner" id="banner">
         <div class="banner__container" id="banner__container">
@@ -544,107 +561,119 @@
 
     <!-- --------------BLOC CONTACT-------------------- -->
     <section class="section-contact">
-        <div class="container">
-          <div class="contacts">
-            <div class="section-contact__grid">
-              <div class="section-contact__grid--1">
-                <ul>
-                  <li>
-                    <ion-icon class="icon" name="location"></ion-icon>
-                    Kotto Rue camtel
-                  </li>
-                  <li>
-                    <ion-icon class="icon" name="mail-outline"></ion-icon>
-                    <a href="#" class="email">info@digital-x-sarl.com</a>
-                  </li>
-                  <li>
-                    <ion-icon name="call"></ion-icon>
-                    680 97 41 48 &dash; 676 93 02 45(Whatsapp)
-                  </li>
-                  <li>
-                    <ion-icon name="time-outline"></ion-icon>
-                    Du lundi au vendredi (8 h - 17h)
-                  </li>
-                </ul>
+  <div class="container">
+    <div class="contacts">
+      <div class="section-contact__grid">
+        <div class="section-contact__grid--1">
+          <ul>
+            <li>
+              <ion-icon class="icon" name="location"></ion-icon>
+              Kotto Rue camtel
+            </li>
+            <li>
+              <ion-icon class="icon" name="mail-outline"></ion-icon>
+              <a href="#" class="email">info@digital-x-sarl.com</a>
+            </li>
+            <li>
+              <ion-icon name="call"></ion-icon>
+              680 97 41 48 &dash; 676 93 02 45(Whatsapp)
+            </li>
+            <li>
+              <ion-icon name="time-outline"></ion-icon>
+              Du lundi au vendredi (8 h - 17h)
+            </li>
+          </ul>
 
-                <ul class="bottom-icons">
-                  <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                  <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                  <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-                  <a href="#"><ion-icon class="icon" name="logo-twitter"></ion-icon></a>
-                  <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-                </ul>
-              </div>
-
-              <div class="section-contact__grid--2">
-                <h2 class="secondary-heading title">
-                  Contactez<span> Nous</span>
-                </h2>
-                <p class="paragraph">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                </p>
-
-                <form class="form">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Full Name"
-                    id="name"
-                    required
-                  />
-                  <label for="name" class="form__label">Full Name</label>
-
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Email"
-                    id="email"
-                    required
-                  />
-                  <label for="email" class="form__label">Email Address</label>
-
-                  <input
-                    type="text"
-                    class="form__input form__input--message"
-                    id="message"
-                    required
-                  />
-
-                  <div class="form__button">
-                    <button class="btn btn--brown">Send</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+          <ul class="bottom-icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"
+              ><ion-icon class="icon" name="logo-twitter"></ion-icon
+            ></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+          </ul>
         </div>
-    </section>
+
+        <div class="section-contact__grid--2">
+          <h2 class="secondary-heading title">Contactez<span> Nous</span></h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+
+          <form class="form">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Full Name"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">Full Name</label>
+
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Email"
+              id="email"
+              required
+            />
+            <label for="email" class="form__label">Email Address</label>
+
+            <input
+              type="text"
+              class="form__input form__input--message"
+              id="message"
+              required
+            />
+
+            <div class="form__button">
+              <button class="btn btn--brown">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
 </main>
 
         <footer>
-    <div class="footer">
-        <div class="container footer-bloc grid-3--cols">
-            <div class="footer-bloc--1">
-                <img src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667382998/dkfarm/footer/logo.png" alt="logo">
-                <p class="paragraph">Weekdays 08:00am - 06:00pm</p>
-                <p class="paragraph">Weekdays 08:00am - 06:00pm</p>
-            </div>
-            <div class="footer-bloc--2">
-                <div class="title">CONTACT</div>
-                <p class="paragraph">523 Sylvan Ave, 5th Floor <br>
-                    Mountain View, CA 94041 USA</p>
-                <p class="paragraph">+237 699 999 9999</p>
-                <p class="paragraph">info@djokwefarm.com</p>
-            </div>
-            <div class="footer-bloc--3">
-                <div class="title">NEWSLETTER</div>
-                <p class="paragraph">Subscribe to our newsletter to receive weekly <br> news updates offers, and exclusive discounts.</p>
-            </div>
-        </div>
-        <div class="footer-copy">
-            <div class="container"><span>&copy; 2022 DK Farm. All rights Reserved.</span></div>
-        </div>
+  <div class="footer">
+    <div class="container footer-bloc grid-3--cols">
+      <div class="footer-bloc--1">
+        <img
+          src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667382998/dkfarm/footer/logo.png"
+          alt="logo"
+        />
+        <p class="paragraph">Weekdays 08:00am - 06:00pm</p>
+        <p class="paragraph">Weekdays 08:00am - 06:00pm</p>
+      </div>
+      <div class="footer-bloc--2">
+        <div class="title">CONTACT</div>
+        <p class="paragraph">
+          523 Sylvan Ave, 5th Floor <br />
+          Mountain View, CA 94041 USA
+        </p>
+        <p class="paragraph">+237 699 999 9999</p>
+        <p class="paragraph">info@djokwefarm.com</p>
+      </div>
+      <div class="footer-bloc--3">
+        <div class="title">NEWSLETTER</div>
+        <p class="paragraph">
+          Subscribe to our newsletter to receive weekly <br />
+          news updates offers, and exclusive discounts.
+        </p>
+      </div>
     </div>
+    <div class="footer-copy">
+      <div class="container">
+        <span>&copy; 2022 DK Farm. All rights Reserved.</span>
+      </div>
+    </div>
+  </div>
 </footer>
 
         <script

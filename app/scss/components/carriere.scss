@@ -1,0 +1,56 @@
+@use "../util" as *;
+
+.carriere {
+  img {
+    width: 100%;
+  }
+
+  &-blocs {
+    gap: rem(40) rem(10);
+    @include breakpoint-down(medium){
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include breakpoint-down(small){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include breakpoint-down(xxsmall){
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    &--img {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      &:hover .carriere-blocs--overlay {
+        background-color: var(--brown-light);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &--overlay {
+      color: var(--white);
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      transition: all 400ms;
+      .paragraph{
+        font-weight: 300;
+    }
+    h4{
+        font-weight: 900;
+      }
+    .btn{
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        padding-top: rem(32);
+    }
+    }
+  }
+}
