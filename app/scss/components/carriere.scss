@@ -4,17 +4,67 @@
   img {
     width: 100%;
   }
+  &-header {
+    background-image: linear-gradient(
+        hsla(29, 85%, 35%, 0.9),
+        hsla(29, 85%, 35%, 0.9)
+      ),
+      url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1668417980/dkfarm/accueil/carriere/carrierebg.png");
+    color: var(--white);
+    &--desc {
+      padding-top: rem(150);
+      text-align: center;
+    }
+    &--img {
+      display: flex;
+      align-items: flex-end;
+      .profil {
+        margin-left: -4rem;
+        @include breakpoint-down(medium){
+          margin-left: -2rem;
+        }
+        @include breakpoint-down(small){
+          margin-left: -1rem;
+        }
+        @include breakpoint-down(xxsmall){
+          margin-left: -0.3rem;
+        }
+      }
+      .profils {
+        margin-right: -4rem;
+        @include breakpoint-down(medium){
+          margin-right: -2rem;
+        }
+        @include breakpoint-down(small){
+          margin-right: -1rem;
+        }
+        @include breakpoint-down(xxsmall){
+          margin-right: -0.3rem;
+        }
+      }
+      .profilss{
+        margin-left: -7rem;
+        @include breakpoint-down(medium){
+          margin-left: -4rem;
+        }
+        @include breakpoint-down(small){
+          margin-left: -1rem;
+        }
+      }
+    }
+  }
 
   &-blocs {
     gap: rem(40) rem(10);
-    @include breakpoint-down(medium){
-        grid-template-columns: repeat(3,1fr);
+    padding-top: rem(32);
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(3, 1fr);
     }
-    @include breakpoint-down(small){
-        grid-template-columns: repeat(2,1fr);
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(2, 1fr);
     }
-    @include breakpoint-down(xxsmall){
-        grid-template-columns: repeat(1,1fr);
+    @include breakpoint-down(xxsmall) {
+      grid-template-columns: repeat(1, 1fr);
     }
 
     &--img {
@@ -24,7 +74,7 @@
       height: auto;
       overflow: hidden;
       &:hover .carriere-blocs--overlay {
-        background-color: var(--brown-light);
+        background-color: var(--brown-lighter);
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -39,18 +89,18 @@
       width: 100%;
       height: 0;
       transition: all 400ms;
-      .paragraph{
+      .paragraph {
         font-weight: 300;
-    }
-    h4{
+      }
+      h4 {
         font-weight: 900;
       }
-    .btn{
+      .btn {
         align-items: center;
         justify-content: center;
         color: var(--white);
         padding-top: rem(32);
-    }
+      }
     }
   }
 }
