@@ -20,34 +20,34 @@
       align-items: flex-end;
       .profil {
         margin-left: -4rem;
-        @include breakpoint-down(medium){
+        @include breakpoint-down(medium) {
           margin-left: -2rem;
         }
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
           margin-left: -1rem;
         }
-        @include breakpoint-down(xxsmall){
+        @include breakpoint-down(xxsmall) {
           margin-left: -0.3rem;
         }
       }
       .profils {
         margin-right: -4rem;
-        @include breakpoint-down(medium){
+        @include breakpoint-down(medium) {
           margin-right: -2rem;
         }
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
           margin-right: -1rem;
         }
-        @include breakpoint-down(xxsmall){
+        @include breakpoint-down(xxsmall) {
           margin-right: -0.3rem;
         }
       }
-      .profilss{
+      .profilss {
         margin-left: -7rem;
-        @include breakpoint-down(medium){
+        @include breakpoint-down(medium) {
           margin-left: -4rem;
         }
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
           margin-left: -1rem;
         }
       }
@@ -71,8 +71,20 @@
       display: block;
       position: relative;
       width: 100%;
-      height: auto;
+      height: 30vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       overflow: hidden;
+      @include breakpoint(xlarge){
+        height: 20vw;
+      }
+      @include breakpoint-down(tablet) {
+        height: 40vw;
+      }
+      @include breakpoint-down(small) {
+        height: 100vw;
+      }
       &:hover .carriere-blocs--overlay {
         background-color: var(--brown-lighter);
         height: 100%;
@@ -100,7 +112,93 @@
         justify-content: center;
         color: var(--white);
         padding-top: rem(32);
+        cursor: pointer;
       }
     }
+  }
+}
+.image {
+  &Pop {
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+    z-index: 200;
+    display: none;
+    &Under {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 12;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .close {
+      position: absolute;
+      z-index: 14;
+      top: 5%;
+      right: 5%;
+      cursor: pointer;
+      color: var(--black);
+    }
+    .blocks {
+      align-content: center;
+      @include breakpoint-down(tablet) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  &Contain {
+    position: relative;
+    top: 0;
+    left: -20%;
+    height: auto;
+    z-index: 12;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    @include breakpoint-down(tablet) {
+      height: 100vw;
+    }
+  }
+  &Text {
+    background-color: var(--pink-light);
+    padding: 0 rem(10) 0 rem(48);
+    display: flex;
+    flex-direction: column;
+    @include breakpoint-down(tablet){
+      padding: rem(16);
+    }
+    .flex {
+      display: flex;
+      flex-direction: column;
+      .title {
+        text-align: initial;
+        font-size: rem(24);
+      }
+      .paragraph {
+        padding-top: rem(17);
+      }
+      &bt {
+        padding: rem(50) 0;
+        @include breakpoint-down(tablet) {
+          padding: rem(25) 0;
+        }
+      }
+      &tp {
+        padding-top: rem(50);
+        @include breakpoint-down(tablet) {
+          padding-top: rem(25);
+        }
+      }
+    }
+  }
+}
+
+@keyframes he {
+  100% {
+    left: 0;
   }
 }
