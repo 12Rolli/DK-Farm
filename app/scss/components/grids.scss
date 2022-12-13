@@ -1,5 +1,9 @@
 @use '../util' as *;
 
+.grid-1--cols{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
 .grid-2--cols{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -11,6 +15,10 @@
 .grid-4--cols{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+}
+.grid-5--cols{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
 }
 .grid-6--cols{
     display: grid;

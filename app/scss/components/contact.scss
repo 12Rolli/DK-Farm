@@ -114,7 +114,7 @@
       &--2 {
         text-align: center;
         padding: 2rem;
-        background-color: var(--brown-light);
+        background-color: rgba(209, 109, 16, 0.17);;
         @include breakpoint-down(small) {
           padding: 0.4rem;
         }

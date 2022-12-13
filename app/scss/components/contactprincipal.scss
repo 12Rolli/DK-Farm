@@ -1,0 +1,149 @@
+@use '../util' as *;
+
+.contactsection {
+    margin-bottom: 3rem;
+
+    &__banner {
+        width: 100%;
+        height: 50vh;
+        background-color: var(--brown);
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+
+        &__text {
+            p {
+                color: var(--white);
+                text-align: center;
+                padding-top: 1rem;
+            }
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            max-width: 23%;
+            left: 19%;
+            transform: translateX(-50%);
+
+            @include breakpoint-down(tablet) {
+                max-width: 36%;
+                left: 0;
+                transform: translateX(0);
+            }
+            @include breakpoint-down(small) {
+                display: none;
+            }
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        margin-top: -7rem;
+        @include breakpoint-down(tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include breakpoint-down(small) {
+            grid-template-columns: 1fr;
+        }
+
+        &--bloc1 {
+            background-color: hsla(29, 54%, 92%, 1);
+            padding: 4rem 3rem;
+            z-index: 50;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6.9rem;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+            box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.21);
+            @include breakpoint-down(tablet) {
+                padding: 3rem 1.5rem;
+            }
+            @include breakpoint-down(small) {
+                grid-row: 2;
+                gap: 2rem;
+            }
+        }
+
+        &--bloc2 {
+            padding: 4rem 3rem;
+            background: url(https://res.cloudinary.com/digital-x-sarl/image/upload/v1668424459/dkfarm/accueil/contact/backcontactform.png);
+            z-index: 50;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.21);
+            @include breakpoint-down(tablet) {
+                padding: 3rem 1.5rem;
+            }
+            input,
+            textarea {
+                width: 136%;
+                margin-left: -8rem;
+                margin-bottom: 0.5rem;
+                border-radius: 0;
+
+                @include breakpoint-down(tablet) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+            label {
+                margin-left: -7rem;
+            }
+
+            .form__button {
+                margin-top: 3rem;
+
+                @include breakpoint-down(small) {
+                    text-align: center;
+                }
+                button {
+                    border: none;
+                }
+            }
+        }
+    }
+    &__information {
+        a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 2rem;
+            padding-bottom: 1rem;
+            align-items: center;
+
+            span {
+                font-weight: 700;
+                font-size: rem(13);
+                color: var(--brown);
+            }
+        }
+    }
+    &__sociallink {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        @include breakpoint-down(small) {
+            justify-self: center;
+        }
+
+        a {
+            display: inline-block;
+        }
+    }
+    &__map {
+        width: 100%;
+        height: 50vh;
+
+        iframe {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+}

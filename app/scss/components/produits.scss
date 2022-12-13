@@ -1,0 +1,279 @@
+@use "../util" as *;
+.Produits {
+  img {
+    width: 100%;
+  }
+  &-bloc {
+    background-image: url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669798642/dkfarm/produits/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    &--1 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: var(--white);
+      top: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .btnbg {
+        align-self: center;
+      }
+    }
+    &--2 {
+      padding-top: rem(32);
+      padding-bottom: rem(93);
+      .title {
+        font-weight: 600;
+      }
+      .groups {
+        padding-top: rem(22);
+        @include breakpoint-down(small) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .group {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &-title {
+            font-weight: 800;
+            margin: rem(14) 0;
+          }
+        }
+      }
+    }
+    &--3 {
+      .blocs {
+        padding: rem(50);
+        background-color: var(--pink-light);
+        gap: rem(39);
+        @include breakpoint-down(small) {
+          grid-template-columns: repeat(1, 1fr);
+          padding: rem(23);
+        }
+        &-img2 {
+          display: none;
+          @include breakpoint-down(tablet) {
+            display: block;
+            position: relative;
+            .fresh1 {
+              position: absolute;
+              left: -8%;
+              top: 45%;
+            }
+          }
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          .title {
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-align: start;
+          }
+          .btnbg{align-self: flex-start;}
+        }
+        &-img {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include breakpoint-down(small) {
+            display: none;
+          }
+          .fresh {
+            position: absolute;
+            width: initial;
+            right: 0%;
+            top: 45%;
+          }
+          .fresh1 {
+            position: absolute;
+            width: initial;
+          }
+          .fresh2 {
+            top: 20%;
+            right: 0%;
+            position: absolute;
+            width: initial;
+          }
+        }
+        &-img--2 {
+          display: none;
+          @include breakpoint-down(small) {
+            display: block;
+            position: relative;
+            padding-bottom: rem(48);
+            .fresh {
+              position: absolute;
+              left: 10%;
+              top: 37%;
+            }
+            .fresh1 {
+              position: absolute;
+              right: 6%;
+            }
+            .fresh2 {
+            }
+          }
+        }
+      }
+    }
+    &--4 {
+      padding-top: rem(45);
+      .paragraph {
+        text-align: center;
+      }
+      .best {
+        padding-top: rem(25);
+        gap: rem(28);
+        @include breakpoint-down(tablet) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        &-blocs {
+          @include breakpoint-down(small) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          gap: rem(10);
+          &--txt {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            @include breakpoint-down(small) {
+              align-items: center;
+            }
+            .desc {
+              font-size: rem(15);
+              &-title {
+                font-weight: 800;
+                font-size: rem(28);
+                @include breakpoint-down(small) {
+                  display: none;
+                }
+              }
+            }
+            .btnbg {
+              @include breakpoint-down(small) {
+                margin-top: rem(16);
+              }
+            }
+          }
+          &--img {
+            .desc {
+              &-title-1 {
+                display: none;
+                @include breakpoint-down(small) {
+                  font-weight: 800;
+                  font-size: rem(28);
+                  display: block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &--5 {
+      padding-top: rem(27);
+      padding-bottom: rem(45);
+      .bloc-text {
+        font-size: rem(24);
+        font-weight: 800;
+        text-align: center;
+        background-image: linear-gradient(
+            hsla(29, 92%, 23%, 0.85),
+            hsla(29, 92%, 23%, 0.85)
+          ),
+          url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1670327856/dkfarm/produits/bg1.png");
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: rem(57) 0;
+        color: var(--white);
+        @include breakpoint-down(small) {
+          font-size: rem(16);
+        }
+      }
+    }
+    &--6 {
+      .blocs {
+        display: grid;
+        // gap: rem(27);
+        grid-template-columns: 0.65fr 1fr;
+        @include breakpoint-down(tablet) {
+          gap: rem(37);
+          grid-template-columns: repeat(1, 1fr);
+        }
+        &-2 {
+          gap: rem(39);
+          @include breakpoint-down(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(17);
+          }
+          &--elts {
+            gap: rem(10);
+            @include breakpoint-down(tablet) {
+              grid-template-columns: repeat(1, 1fr);
+            }
+            .elts {
+              &_img {
+                &__title {
+                  display: none;
+                  @include breakpoint-down(tablet) {
+                    display: block;
+                    text-align: center;
+                    font-weight: 800;
+                    font-size: rem(20);
+                  }
+                }
+              }
+              &--txt {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                @include breakpoint-down(tablet) {
+                  align-items: center;
+                  text-align: center;
+                }
+                .desc {
+                  font-size: rem(14);
+                  &-title {
+                    font-weight: 800;
+                    font-size: rem(28);
+                    @include breakpoint-down(tablet) {
+                      display: none;
+                    }
+                  }
+                }
+                .btnbg {
+                  @include breakpoint-down(small) {
+                    margin-top: rem(16);
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-3 {
+          gap: rem(10);
+          align-content: end;
+          @include breakpoint-down(medium) {
+            align-content: center;
+          }
+          @include breakpoint-down(tablet) {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          .elts_img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

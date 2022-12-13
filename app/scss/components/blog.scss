@@ -1,0 +1,94 @@
+@use '../util' as *;
+
+.bannerblog {
+    background: linear-gradient(
+            rgba(166, 86, 13, 0.49),
+            rgba(166, 86, 13, 0.49)
+        ),
+        url(https://res.cloudinary.com/digital-x-sarl/image/upload/v1669298104/dkfarm/blog/bannerblog.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(45);
+        text-transform: uppercase;
+        color: var(--white);
+    }
+}
+
+.cards {
+
+    &__title{
+        font-weight: 700;
+        font-size: rem(16);
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+    }
+    &__item {
+        background-color: rgba(166, 86, 13, 0.1);
+        overflow: hidden;
+
+        &__img{
+            overflow: hidden;
+            img{
+                width: 100%;
+                transition: all 0.4s;
+                display: block;
+            }
+        }
+        &__text {
+            padding: 1.5rem 2rem 3rem 2rem ;
+            display: grid;
+            gap: 1.5rem;
+            &--1 {
+                font-weight: 400;
+                font-size: rem(12);
+                color: var(--black);
+            }
+            &--2 {
+                font-weight: 550;
+                font-size: rem(20);
+                line-height: 144%;
+                transition: all 0.4s;
+                color: var(--black);
+            }
+        }
+    }
+
+    &__item:hover{
+        .cards__item__img img{
+                transform: scale(1.2);        
+        }
+        
+
+        .cards__item__text {
+            &--2 {
+               color: var(--brown);
+               //transform: scale(1.1);
+               transform: scaleX(1.05);
+            }
+        }
+    }
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+
+    @include breakpoint-down(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-down(small) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

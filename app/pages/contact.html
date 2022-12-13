@@ -1,0 +1,126 @@
+{% set page_title = "DK Farm" %} {% extends "layout.html" %} {% block metadata
+%} {% endblock %} {% block content %}
+<section class="contactsection">
+    <div class="contactsection__banner">
+        <div class="contactsection__banner__text container">
+            <h1 class="title title--white"><span>Contactez - </span>Nous</h1>
+            <p class="paragraph paragraph--white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                repellat voluptates voluptas <br />
+                +237 699 999 999 / 677 777 777
+            </p>
+        </div>
+        <img
+            src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667304518/dkfarm/accueil/imgcontact.png"
+            alt="image d'un employé"
+        />
+    </div>
+    <div class="contactsection__map" >
+        <iframe
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=digital%20x%20sarl+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ><a href="https://www.maps.ie/distance-area-calculator.html"
+                >distance maps</a
+            ></iframe
+        >
+    </div>
+    <div class="contactsection__container container">
+        <div class="contactsection__container--bloc1">
+            <div class="contactsection__information">
+                <a>
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837400/dkfarm/accueil/contact/logo_location.svg"
+                        alt=""
+                    />
+                    <span>Kotto Rue Châteaux</span>
+                </a>
+                <a>
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837400/dkfarm/accueil/contact/logo_email.svg"
+                        alt=""
+                    />
+                    <span>info@digital-x-sarl.com</span>
+                </a>
+                <a>
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837400/dkfarm/accueil/contact/logo_telephone.svg"
+                        alt=""
+                    />
+                    <span>680 97 41 48 - 676 93 02 45 (WhatsApp) </span>
+                </a>
+                <a>
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837401/dkfarm/accueil/contact/logo_horloge.svg"
+                        alt=""
+                    />
+                    <span>Du lundi au vendredi (8 h - 17 h)</span>
+                </a>
+            </div>
+
+            <div class="contactsection__sociallink">
+                <a href="#">
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837398/dkfarm/accueil/contact/logo_facebook.svg"
+                        alt=""
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837400/dkfarm/accueil/contact/logo_insta.svg"
+                        alt=""
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837401/dkfarm/accueil/contact/logo_linkedin.svg"
+                        alt=""
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837398/dkfarm/accueil/contact/logo_twitter.svg"
+                        alt=""
+                /></a>
+                <a href="#"
+                    ><img
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1667837397/dkfarm/accueil/contact/logo_youtube.svg"
+                        alt=""
+                /></a>
+            </div>
+        </div>
+        <div class="contactsection__container--bloc2 form">
+            <input
+                type="text"
+                placeholder="Votre nom"
+                name="name"
+                required
+                class="form__input"
+            />
+            <!-- <label for="name" class="form__label">Nom</label> -->
+            <input
+                type="email"
+                name="email"
+                placeholder="Votre email"
+                required
+                class="form__input"
+            />
+            <!-- <label for="email" class="form__label">Email</label> -->
+            <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="6"
+                placeholder="Votre message"
+                class="form__input"
+            ></textarea>
+            <!-- <label for="message" class="form__label">Message</label> -->
+            <div class="form__button">
+                <button class="btnbg">Envoyer</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

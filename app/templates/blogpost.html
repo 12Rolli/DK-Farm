@@ -1,0 +1,135 @@
+{% block contents %}
+<section class="bannerblog">
+    <div class="bannerblog__container container">
+        <h2 class="bannerblog__title">blog post</h2>
+        <p class="paragraph paragraph--white">{{ bannerblogpost_paragraph1 }}</p>
+        <p class="paragraph paragraph--white">{{ bannerblogpost_paragraph2 }}</p>
+    </div>
+</section>
+<section class="contentblogpost container">
+    <div class="contentblogpost__header">
+        <div class="contentblogpost__header__container">
+            <p class="contentblogpost__date">{{ contentblogpost_date }}</p>
+            <h2 class="contentblogpost__title title">
+                {{ contentblogpost_title }}
+            </h2>
+        </div>
+    </div>
+    <div class="contentblogpost__body">
+        <div class="contentblogpost__description">
+            <div class="contentblogpost__img">
+                <img src="{{ contentblogpost_img }}" alt="" />
+            </div>
+            <div class="contentblogpost__text">
+                <p class="paragraph">{{ contentblogpost_paragraphone }}</p>
+                <p class="paragraph">{{ contentblogpost_paragraphtwo }}</p>
+                <p class="paragraph contentblogpost__text--three">
+                    {{ contentblogpost_paragraphthree }}
+                </p>
+                <p class="paragraph">{{ contentblogpost_paragraphfour }}</p>
+                <p class="contentblogpost__text--line"></p>
+            </div>
+        </div>
+        <div class="contentblogpost__information">
+            <div class="contentblogpost__category">
+                <h3 class="contentblogpost__subtitle">CATEGORIES</h3>
+                <div class="contentblogpost__category__item">
+                    <span class="paragraph">Nouveau</span>
+                    <span class="paragraph">(15)</span>
+                </div>
+                <div class="contentblogpost__category__item">
+                    <span class="paragraph">Organic Food</span>
+                    <span class="paragraph">(9)</span>
+                </div>
+                <div class="contentblogpost__category__item">
+                    <span class="paragraph">Produit</span>
+                    <span class="paragraph">(3)</span>
+                </div>
+                <div class="contentblogpost__category__item">
+                    <span class="paragraph">Santé</span>
+                    <span class="paragraph">(10)</span>
+                </div>
+            </div>
+
+            <div class="contentblogpost__latestpost">
+                <h3 class="contentblogpost__subtitle">latest posts</h3>
+                <a href="#" class="contentblogpost__latestpost__item">
+                    <div class="contentblogpost__latestpost__item--img">
+                        <img src=" {{latestpost_imgone}}" alt="" />
+                    </div>
+                    <div class="contentblogpost__latestpost__item--description">
+                        <h3>{{latestpost_titleone}}</h3>
+                        <p>{{latestpost_dateone}}</p>
+                    </div>
+                </a>
+
+                <a href="#" class="contentblogpost__latestpost__item">
+                    <div class="contentblogpost__latestpost__item--img">
+                        <img src=" {{latestpost_imgtwo}}" alt="" />
+                    </div>
+                    <div class="contentblogpost__latestpost__item--description">
+                        <h3>{{latestpost_titletwo}}</h3>
+                        <p>{{latestpost_datetwo}}</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contentblogpost__archieve">
+                <h3 class="contentblogpost__subtitle">archives</h3>
+                <ul class="contentblogpost__list">
+                    <li class="contentblogpost__archieve__item">
+                        <a href="#" class="paragraph paragraph--black"
+                            >Mars 2022</a
+                        >
+                    </li>
+                    <li class="contentblogpost__archieve__item">
+                        <a href="#" class="paragraph paragraph--black"
+                            >Févvrier 2022</a
+                        >
+                    </li>
+                    <li class="contentblogpost__archieve__item">
+                        <a href="#" class="paragraph paragraph--black"
+                            >Janvier 2022</a
+                        >
+                    </li>
+                    <li class="contentblogpost__archieve__item">
+                        <a href="#" class="paragraph paragraph--black"
+                            >Août 2022</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cardcontainer">
+        <h2 class="cards__title">related posts</h2>
+        <div class="cards grid-3">
+            <a href=" blog.html" class="cards__item">
+                <div class="cards__item__img">
+                    <img src="{{ card_imgone }}" alt="" />
+                </div>
+                <div class="cards__item__text">
+                    <p class="cards__item__text--1">{{ card_dateone }}</p>
+                    <h2 class="cards__item__text--2">{{ card_titleone }}</h2>
+                    <p class="cards__item__text--3 paragraph paragraph--black">
+                        {{ card_textone }}
+                    </p>
+                </div>
+            </a>
+            <a href="blog.html" class="cards__item">
+                <div class="cards__item__img">
+                    <img src="{{ card_imgtwo }}" alt="" />
+                </div>
+                <div class="cards__item__text">
+                    <p class="cards__item__text--1">{{ card_datetwo }}</p>
+                    <h2 class="cards__item__text--2">{{ card_titletwo}}</h2>
+                    <p class="cards__item__text--3 paragraph paragraph--black">
+                        {{ card_texttwo }}
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

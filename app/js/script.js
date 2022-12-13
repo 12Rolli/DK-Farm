@@ -96,6 +96,7 @@ function chooseTab(headerToSelect, identifier) {
   }
 
   if (dataImg !== identifier) {
+    
     seclectedImage.removeClass("quisommenous__image--selected");
     const selectedImageContent = $(
       '[data-tab^="' + "image-" + identifier + '"]'
