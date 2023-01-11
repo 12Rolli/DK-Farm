@@ -1,45 +1,75 @@
 @use '../util' as *;
 
 .features {
-    line-height: 177%;
-    background-color: var(--brown-lighter);
-    margin-top: 5rem;
-    padding: 7rem 0;
-    text-align: center;
-    .secondary-heading {
-      color: var(--brown);
-      margin-bottom: 2rem;
-      font-weight: 900;
+  line-height: 177%;
+  background-color: var(--brown-lighter);
+  margin-top: 5rem;
+  padding: 7rem 0;
+  text-align: center;
+  .secondary-heading {
+    color: var(--brown);
+    margin-bottom: 2rem;
+    font-weight: 900;
+  }
+  span {
+    font-weight: 300;
+  }
+
+  .btn--brown {
+    margin-top: 2rem;
+    padding: 0.5rem 4rem;
+    background-color: var(--brown);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    cursor: pointer;
+  }
+  &__products {
+    img {
+      width: 100%;
     }
-    span {
-      font-weight: 300;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
     }
-  
-    .btn--brown {
-      margin-top: 2rem;
-      padding: 0.5rem 4rem;
-      background-color: var(--brown);
-      border: none;
-      border-radius: 10px;
-      color: var(--white);
-      cursor: pointer;
-    }
-    &__products {
-      img {
-        width: 100%;
-      }
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+    &-items {
+      border-radius: 5px;
+      overflow: hidden;
       @include breakpoint-down(small) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-      }
-  
-      &-items {
-        border-radius: 5px;
-        overflow: hidden;
-        @include breakpoint-down(small) {
-        }
       }
     }
   }
+}
+@keyframes scaling {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.features__products img {
+  animation: scaling 10s linear infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+    // animation-duration: 0s;
+  }
+  &:nth-of-type(2) {
+    // animation-duration: 5s;
+    animation-delay: 5s;
+  }
+  &:nth-of-type(3) {
+    // animation-duration: 10s;
+    animation-delay: 10s;
+  }
+  &:nth-of-type(4) {
+    // animation-duration: 15s;
+    animation-delay: 15s;
+  }
+}

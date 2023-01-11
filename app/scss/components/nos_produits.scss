@@ -1,64 +1,86 @@
 @use '../util' as *;
 
-.produits{
-    margin-top: rem(90);
-    background-image: url('https://res.cloudinary.com/digital-x-sarl/image/upload/v1667467634/dkfarm/accueil/nosproduitsbg.png');
-    background-size: cover;
-    background-position: center;
-    // height: 130vh;
-    @include breakpoint-down(small){
-        background-image: none;
+.produits {
+  margin-top: rem(90);
+  background-image: url('https://res.cloudinary.com/digital-x-sarl/image/upload/v1672927012/dkfarm/produits/nosproduitsbg.png');
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-4deg);
+  position: relative;
+  height: 60vw;
+  @include breakpoint-down(medium) {
+    transform: none;
+    height: auto;
+  }
+  .produit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewY(4deg);
+    width: 100%;
+    @include breakpoint-down(medium) {
+      position: relative;
+      transform: none;
+      top: 0%;
+      left: 0%;
     }
-    .produit{
-        padding-top: rem(100);
-        @include breakpoint-down(extralarge){
-            padding-top: rem(200);
-        }
-        @include breakpoint-down(small){
-            padding-top: rem(40);
-        }
-        
-        &-title{
-            color: var(--white);
-            @include breakpoint-down(small){
-                color: var(--brown);
-            }
-            b{font-weight: 300;}
-        }
-        &-blocs{
-            padding: rem(55) 0 rem(240) 0;
-            // padding: rem(55) 0 0 0;
-            gap: rem(10);
-            @include breakpoint-down(tablet){
-                grid-template-columns: repeat(3,1fr);
-            }
-            @include breakpoint-down(small){
-                grid-template-columns: repeat(1,1fr);
-                padding: rem(55) 0 rem(96) 0;
-            }
-            img{width: 100%;}
-            .bg{
-                background-color: var(--pink-light);
-                padding: rem(7) rem(5) rem(20) rem(5);
-                border-radius: rem(5);
-                .text{
-                    font-weight: 700;
-                    text-align: center;
-                    padding-top: rem(10);
-                }
-                .paragraph{
-                    text-align: center;
-                    span{
-                        display: none;
-                    }
-                }
-            }
-        }
-        // .activeblock{
-        //     display: block;
-        // }
-        // .block{
-        //     display: block !important;
-        // }
+    &-title {
+      color: var(--white);
+      left: 50%;
+      position: absolute;
+      top: 13%;
+      transform: translate(-50%, -50%) skewY(4deg);
+      @include breakpoint-down(medium) {
+        padding-top: rem(14);
+        position: relative;
+        transform: none;
+        left: 0%;
+      }
+      b {
+        font-weight: 300;
+      }
     }
+    &-blocs {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      @include breakpoint-down(medium) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 2rem;
+      }
+      @include breakpoint-down(small) {
+        grid-template-columns: repeat(1, 1fr);
+        padding: rem(55) 0 rem(96) 0;
+      }
+      img {
+        width: 100%;
+      }
+      .bg {
+        background-color: var(--pink-light);
+        padding: rem(7) rem(5) rem(20) rem(5);
+        width: 100%;
+        overflow: hidden;
+        .block-bg {
+          display: none;
+        }
+        img {
+          cursor: pointer;
+        }
+        &:hover {
+          .block-bg {
+            display: block;
+          }
+        }
+        .text {
+          font-weight: 700;
+          text-align: center;
+          padding-top: rem(10);
+        }
+        .paragraph {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

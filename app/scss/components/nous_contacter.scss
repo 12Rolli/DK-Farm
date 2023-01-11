@@ -3,7 +3,7 @@
 .nous_contacter{
     margin-top: rem(-230);
     @include breakpoint-down(medium){
-        margin-top: rem(-45);
+        margin-top: rem(0);
     }
 
     .contact{

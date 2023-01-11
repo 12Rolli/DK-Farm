@@ -4,7 +4,7 @@
     width: 100%;
   }
   &-bloc {
-    background-image: url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669798642/dkfarm/produits/bg.png");
+    background-image: url('https://res.cloudinary.com/digital-x-sarl/image/upload/v1669798642/dkfarm/produits/bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,6 +18,9 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, -50%);
+      .title {
+        font-weight: 500;
+      }
       .btnbg {
         align-self: center;
       }
@@ -30,8 +33,11 @@
       }
       .groups {
         padding-top: rem(22);
+        gap: rem(140);
+        text-align: center;
         @include breakpoint-down(small) {
           grid-template-columns: repeat(1, 1fr);
+          gap: rem(20);
         }
         .group {
           display: flex;
@@ -41,13 +47,17 @@
             font-weight: 800;
             margin: rem(14) 0;
           }
+          &-desc {
+            font-weight: 300;
+          }
         }
       }
     }
     &--3 {
       .blocs {
-        padding: rem(50);
-        background-color: var(--pink-light);
+        // padding: rem(50);
+        padding: rem(96) rem(68) rem(65) rem(84);
+        background-color: var(--pink-lighter);
         gap: rem(39);
         @include breakpoint-down(small) {
           grid-template-columns: repeat(1, 1fr);
@@ -73,7 +83,17 @@
             letter-spacing: 0.06em;
             text-align: start;
           }
-          .btnbg{align-self: flex-start;}
+          .paragraph {
+            display: flex;
+            align-items: center;
+            gap: rem(12);
+            ion-icon {
+              font-size: rem(25);
+            }
+          }
+          .btnbg {
+            align-self: flex-start;
+          }
         }
         &-img {
           position: relative;
@@ -92,9 +112,10 @@
           .fresh1 {
             position: absolute;
             width: initial;
+            right: 20%;
           }
           .fresh2 {
-            top: 20%;
+            top: 10%;
             right: 0%;
             position: absolute;
             width: initial;
@@ -123,6 +144,9 @@
     }
     &--4 {
       padding-top: rem(45);
+      .title {
+        font-weight: 600;
+      }
       .paragraph {
         text-align: center;
       }
@@ -133,10 +157,11 @@
           grid-template-columns: repeat(1, 1fr);
         }
         &-blocs {
-          @include breakpoint-down(small) {
-            grid-template-columns: repeat(1, 1fr);
-          }
           gap: rem(10);
+          display: flex;
+          @include breakpoint-down(small) {
+            flex-direction: column;
+          }
           &--txt {
             display: flex;
             flex-direction: column;
@@ -188,7 +213,7 @@
             hsla(29, 92%, 23%, 0.85),
             hsla(29, 92%, 23%, 0.85)
           ),
-          url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1670327856/dkfarm/produits/bg1.png");
+          url('https://res.cloudinary.com/digital-x-sarl/image/upload/v1670327856/dkfarm/produits/bg1.png');
 
         background-position: center;
         background-repeat: no-repeat;
@@ -202,29 +227,30 @@
     }
     &--6 {
       .blocs {
-        display: grid;
-        // gap: rem(27);
-        grid-template-columns: 0.65fr 1fr;
-        @include breakpoint-down(tablet) {
-          gap: rem(37);
-          grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        gap: rem(27);
+        @include breakpoint-down(medium) {
+          flex-direction: column;
         }
         &-2 {
-          gap: rem(39);
+          display: flex;
+          flex-direction: column;
+          gap: rem(32);
           @include breakpoint-down(tablet) {
             grid-template-columns: repeat(2, 1fr);
             gap: rem(17);
           }
           &--elts {
             gap: rem(10);
-            @include breakpoint-down(tablet) {
-              grid-template-columns: repeat(1, 1fr);
+            display: flex;
+            @include breakpoint-down(medium) {
+              flex-direction: column;
             }
             .elts {
               &_img {
                 &__title {
                   display: none;
-                  @include breakpoint-down(tablet) {
+                  @include breakpoint-down(medium) {
                     display: block;
                     text-align: center;
                     font-weight: 800;
@@ -237,9 +263,10 @@
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: space-evenly;
-                @include breakpoint-down(tablet) {
+                @include breakpoint-down(medium) {
                   align-items: center;
                   text-align: center;
+                  margin: 0;
                 }
                 .desc {
                   font-size: rem(14);
